@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ventanas Westlake | Luxury Modern Homesites in Westlake, Texas</title>
+<meta name="description" content="Ventanas Westlake is an exclusive gated community of 52 homesites with luxury modern architecture, set within Entrada at Solana Boulevard and Campus Circle in Westlake, Texas. Developed by Otter Partners. Presented by George & Noonan Real Estate Group.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ventanas Westlake | Luxury Modern Homesites in Westlake, Texas">
+<meta property="og:description" content="An exclusive gated community of 52 homesites with luxury modern architecture, within Entrada in Westlake, Texas.">
+<meta property="og:url" content="https://www.ventanaswestlake.com/">
+<meta property="og:image" content="https://www.ventanaswestlake.com/assets/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/ventanas-logo-black.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --black:#000000;
+    --panel:#0f0f0f;
+    --panel-2:#171717;
+    --line:rgba(255,255,255,.14);
+    --line-strong:rgba(255,255,255,.28);
+    --white:#ffffff;
+    --off:#f2f1ec;          /* light section bg — matches the lot map paper */
+    --paper:#fcfaf6;        /* exact lot map background */
+    --text:#e9e8e3;
+    --muted:#a3a39d;
+    --muted-dark:#5f5f5a;   /* on light sections */
+    --ink:#0b0b0b;          /* text on light sections */
+    --gold:#c8a96a;         /* single warm accent, from the dusk sky */
+
+    --maxw:1240px;
+    --gutter:clamp(1.25rem,5vw,4.5rem);
+    --sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --wide:"Syncopate","Manrope",sans-serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);font-weight:300;color:var(--text);background:var(--black);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--sans);font-weight:300;line-height:1.1;letter-spacing:-.02em;color:var(--white)}
+
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+
+  /* wide label — echoes the extended logo letterforms */
+  .label{font-family:var(--wide);font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:400}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-block;font-family:var(--wide);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;
+    padding:1.1rem 2.1rem;border:1px solid var(--white);color:var(--white);background:transparent;cursor:pointer;
+    transition:background .3s ease,color .3s ease,border-color .3s ease;
+  }
+  .btn:hover,.btn:focus-visible{background:var(--white);color:var(--black)}
+  .btn--fill{background:var(--white);color:var(--black)}
+  .btn--fill:hover,.btn--fill:focus-visible{background:var(--gold);border-color:var(--gold);color:var(--black)}
+  .btn--dark{border-color:var(--ink);color:var(--ink)}
+  .btn--dark:hover,.btn--dark:focus-visible{background:var(--ink);color:var(--white)}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+    padding:1.5rem var(--gutter);transition:background .4s ease,padding .4s ease,border-color .4s ease;
+    border-bottom:1px solid transparent;
+  }
+  header.nav.scrolled{background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-bottom-color:var(--line);padding-top:1rem;padding-bottom:1rem}
+  .brand img{height:22px;width:auto}
+  nav.links{display:flex;gap:2.4rem;align-items:center}
+  nav.links a{font-family:var(--wide);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text);opacity:.85;transition:opacity .25s ease,color .25s ease}
+  nav.links a:hover{opacity:1;color:var(--gold)}
+  .nav-cta{border:1px solid var(--line-strong);padding:.7rem 1.2rem}
+  .menu-btn{display:none;background:none;border:0;color:var(--white);cursor:pointer;width:32px;height:32px;position:relative}
+  .menu-btn span{position:absolute;left:4px;right:4px;height:1px;background:var(--white);transition:transform .3s ease,opacity .3s ease}
+  .menu-btn span:nth-child(1){top:10px}.menu-btn span:nth-child(2){top:16px}.menu-btn span:nth-child(3){top:22px}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--black)}
+  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .hero .shade{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.15) 32%,rgba(0,0,0,.05) 55%,rgba(0,0,0,.82) 100%);
+  }
+  .hero .inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(6rem,14vh,9rem);padding-top:8rem}
+  .hero-logo{width:min(720px,88vw);height:auto;margin-bottom:2rem}
+  .hero-tag{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:40ch;color:var(--text);font-weight:300;line-height:1.5}
+  .hero-cta{margin-top:2.4rem;display:flex;gap:1rem;flex-wrap:wrap}
+
+  .hero-strip{
+    position:absolute;left:0;right:0;bottom:0;z-index:3;
+    border-top:1px solid var(--line);background:rgba(0,0,0,.65);backdrop-filter:blur(6px);
+  }
+  .hero-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:1.1rem}
+  .hero-strip .item{font-family:var(--wide);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text)}
+  .hero-strip .dev{display:flex;align-items:center;gap:.9rem}
+  .hero-strip .dev img{height:34px;width:auto;opacity:.95}
+
+  /* ---------- Sections ---------- */
+  .section{padding:clamp(5rem,10vw,8.5rem) 0}
+  .section h2{font-size:clamp(2.1rem,4.6vw,3.6rem)}
+  .head{max-width:56ch}
+  .head .label{display:block;margin-bottom:1.2rem}
+  .lead{font-size:1.15rem;color:var(--muted);max-width:60ch}
+
+  /* Overview */
+  .overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,7vw,6rem);align-items:start}
+  .statement{font-size:clamp(1.9rem,3.6vw,3rem);font-weight:300;line-height:1.15;letter-spacing:-.02em;color:var(--white)}
+  .overview-body p{color:var(--muted);margin-bottom:1.25rem}
+  .overview-body p:first-child{color:var(--text);font-size:1.08rem}
+
+  /* Stats */
+  .stats{background:var(--panel)}
+  .stats .wrap{padding-block:clamp(4rem,8vw,6.5rem)}
+  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .stats-grid .cell{padding:2.2rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats-grid .num{font-size:2.8rem;font-weight:300;letter-spacing:-.03em;color:var(--white);line-height:1}
+  .stats-grid .num.wide{font-family:var(--wide);font-size:1.25rem;letter-spacing:.2em;text-transform:uppercase;padding-top:.6rem}
+  .stats-grid .lbl{margin-top:.8rem;font-size:.92rem;color:var(--muted)}
+
+  /* Site plan (light) */
+  .plan{background:var(--paper);color:var(--ink)}
+  .plan h2,.plan h3{color:var(--ink)}
+  .plan .lead{color:var(--muted-dark)}
+  .plan-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+  .plan-map{border:1px solid rgba(0,0,0,.12);background:var(--paper)}
+  .plan-map img{width:100%}
+  .plan-list{list-style:none;margin-top:2rem}
+  .plan-list li{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-top:1px solid rgba(0,0,0,.12);font-size:.98rem}
+  .plan-list li span:last-child{font-family:var(--wide);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-dark);white-space:nowrap;padding-top:.35rem}
+  .plan-list li:last-child{border-bottom:1px solid rgba(0,0,0,.12)}
+  .plan .btn{margin-top:2.2rem}
+  .plan .fine{font-size:.78rem;color:var(--muted-dark);margin-top:1.2rem}
+
+  /* Architecture feature */
+  .arch{position:relative;overflow:hidden}
+  .arch .media{position:relative;height:clamp(420px,70vh,760px)}
+  .arch .media img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+  .arch .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.1) 100%)}
+  .arch .copy{position:absolute;inset:0;display:flex;align-items:center}
+  .arch .copy .box{max-width:520px}
+  .arch h3{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:1.2rem}
+  .arch p{color:var(--text);margin-bottom:1rem}
+  .arch ul{list-style:none;margin-top:1.4rem}
+  .arch li{padding:.75rem 0;border-top:1px solid var(--line);font-size:.96rem;color:var(--text)}
+
+  /* Lifestyle (three columns) */
+  .life-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3.5rem;border-top:1px solid var(--line)}
+  .life-grid .col{padding:2.4rem 2rem 2.4rem 0;border-right:1px solid var(--line);margin-right:2rem}
+  .life-grid .col:last-child{border-right:0;margin-right:0}
+  .life-grid h3{font-size:1.35rem;font-weight:400;margin-bottom:.9rem}
+  .life-grid p{color:var(--muted);font-size:.98rem}
+
+  /* Location */
+  .location{background:var(--panel)}
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,6rem);align-items:start}
+  .loc-list{margin-top:2.4rem}
+  .loc-list .row{display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 0;border-top:1px solid var(--line)}
+  .loc-list .row:last-child{border-bottom:1px solid var(--line)}
+  .loc-list .row span:last-child{color:var(--gold);font-weight:400}
+  .loc-addr{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:300;line-height:1.25;color:var(--white);margin-top:1.2rem}
+  .loc-addr small{display:block;font-family:var(--wide);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:.9rem}
+
+  /* Developer */
+  .developer{text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .developer .wrap{padding-block:clamp(3.5rem,7vw,5.5rem);display:flex;flex-direction:column;align-items:center;gap:1.4rem}
+  .developer img{height:110px;width:auto}
+  .developer p{max-width:58ch;color:var(--muted)}
+
+  /* Availability */
+  .avail{text-align:center}
+  .avail .wrap{padding-block:clamp(5rem,10vw,8rem)}
+  .avail h2{max-width:22ch;margin-inline:auto}
+  .avail p{max-width:54ch;margin:1.6rem auto 2.6rem;color:var(--muted)}
+
+  /* Contact */
+  .contact{background:var(--panel)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem)}
+  .agents{margin-top:2.6rem}
+  .agent{border-top:1px solid var(--line);padding:1.5rem 0}
+  .agent:last-child{border-bottom:1px solid var(--line)}
+  .agent .name{font-size:1.5rem;font-weight:400;color:var(--white)}
+  .agent .role{font-family:var(--wide);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:.3rem 0 .7rem}
+  .agent a{font-size:1.15rem;color:var(--text)}
+  .agent a:hover{color:var(--gold)}
+
+  form .field{margin-bottom:1.3rem}
+  form label{display:block;font-family:var(--wide);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+  form input,form select,form textarea{
+    width:100%;font-family:var(--sans);font-weight:300;font-size:1rem;color:var(--white);
+    background:var(--black);border:1px solid var(--line-strong);padding:.95rem 1rem;transition:border-color .25s ease;
+  }
+  form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px;background-repeat:no-repeat}
+  form select option{background:var(--black)}
+  form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--gold)}
+  form textarea{min-height:130px;resize:vertical}
+  .hp{position:absolute;left:-9999px}
+  .form-note{font-size:.78rem;color:var(--muted);margin-top:1rem;line-height:1.55}
+
+  /* Footer */
+  footer.site{padding:clamp(4rem,7vw,5.5rem) 0 2.5rem;border-top:1px solid var(--line)}
+  .foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--line);align-items:start}
+  .foot-brand img{height:26px;width:auto;margin-bottom:1.4rem}
+  .foot-brand p{max-width:40ch;color:var(--muted);font-size:.95rem}
+  .foot-gn{margin-top:1.8rem}
+  .foot-gn img{height:44px;width:auto}
+  .foot-col h4{font-family:var(--wide);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;font-weight:400}
+  .foot-col a,.foot-col p{display:block;font-size:.95rem;margin-bottom:.65rem;color:var(--text)}
+  .foot-col a:hover{color:var(--gold)}
+  .foot-legal{padding-top:2rem;font-size:.78rem;line-height:1.75;color:var(--muted)}
+  .foot-legal .links a{display:inline-block;margin:0 1.6rem .6rem 0;text-decoration:underline;text-underline-offset:3px;color:var(--text)}
+  .foot-legal .links a:hover{color:var(--gold)}
+  .foot-bottom{margin-top:1.6rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.78rem}
+
+  /* ---------- Motion (single load moment) ---------- */
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  .hero img.bg{animation:fadeIn 1.6s ease both}
+  .hero-logo{animation:rise 1s .4s ease both}
+  .hero-tag{animation:rise 1s .6s ease both}
+  .hero-cta{animation:rise 1s .78s ease both}
+  .hero-strip{animation:fadeIn 1s 1.1s ease both}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:960px){
+    nav.links{
+      position:fixed;inset:0;background:var(--black);flex-direction:column;justify-content:center;gap:2.2rem;
+      transform:translateX(100%);transition:transform .4s ease;
+    }
+    nav.links.open{transform:translateX(0)}
+    nav.links a{font-size:.8rem}
+    .menu-btn{display:block;z-index:101}
+    .overview-grid,.plan-grid,.loc-grid,.contact-grid{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .life-grid{grid-template-columns:1fr}
+    .life-grid .col{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding:2rem 0}
+    .life-grid .col:last-child{border-bottom:0}
+    .arch .media::after{background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.9))}
+    .arch .copy{align-items:flex-end;padding-bottom:3rem}
+    .foot-top{grid-template-columns:1fr}
+    .hero-strip .wrap{justify-content:center;text-align:center}
+  }
+  @media(max-width:520px){
+    .stats-grid{grid-template-columns:1fr}
+    .hero .inner{padding-bottom:9rem}
+    .hero-strip .item{font-size:.55rem;letter-spacing:.22em}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Ventanas Westlake home"><img src="assets/ventanas-logo-white.png" alt="Ventanas Westlake"></a>
+  <nav class="links" id="menu">
+    <a href="#overview">Overview</a>
+    <a href="#siteplan">Site Plan</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#location">Location</a>
+    <a href="#contact" class="nav-cta">Inquire</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <img class="bg" src="assets/hero.jpg" alt="A modern luxury home at dusk with warm interior lighting, slatted wood facade, and a landscaped entry path" fetchpriority="high">
+  <div class="shade" aria-hidden="true"></div>
+
+  <div class="inner wrap">
+    <img class="hero-logo" src="assets/ventanas-logo-white.png" alt="Ventanas Westlake">
+    <p class="hero-tag">An exclusive gated community of 52 homesites, defined by luxury modern architecture, within Entrada in Westlake, Texas.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn--fill">Request Information</a>
+      <a href="#siteplan" class="btn">View the Site Plan</a>
+    </div>
+  </div>
+
+  <div class="hero-strip">
+    <div class="wrap">
+      <span class="item">Exclusive Gated Community</span>
+      <span class="item">52 Homesites</span>
+      <span class="item">Luxury Modern Architecture</span>
+      <span class="dev"><span class="item" style="color:var(--muted)">Developed by</span><img src="assets/otter-partners.png" alt="Otter Partners"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+<section class="section" id="overview">
+  <div class="wrap">
+    <div class="overview-grid">
+      <div>
+        <span class="label" style="display:block;margin-bottom:1.4rem">Welcome to Ventanas</span>
+        <p class="statement">The pinnacle of contemporary living, in the heart of Westlake.</p>
+      </div>
+      <div class="overview-body">
+        <p>Nestled within the prestigious landscape of Westlake, Texas, Ventanas is an exclusive neighborhood that represents the pinnacle of contemporary living.</p>
+        <p>Each residence showcases striking modern architecture — clean lines, expansive glass facades, and innovative design that seamlessly blends indoor and outdoor space. Residents enjoy privileged access to everything Entrada has to offer, from resort-style amenities to exclusive dining and recreation, while Ventanas holds onto the intimate, boutique feel of a private gated enclave.</p>
+        <p>Miles of scenic walking trails wind through preserved green space and connect to Westlake's broader trail network — peaceful retreats for morning runs, evening strolls, and family bike rides. It is the perfect balance of contemporary luxury, premium amenities, and natural beauty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">The Community</span>
+      <h2>Boutique by design. Limited by intention.</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="cell"><div class="num">52</div><div class="lbl">Homesites — and no more</div></div>
+      <div class="cell"><div class="num">15.3</div><div class="lbl">Acres at Solana Boulevard and Campus Circle</div></div>
+      <div class="cell"><div class="num">24/7</div><div class="lbl">Exclusive gated community with controlled access</div></div>
+      <div class="cell"><div class="num wide">Entrada</div><div class="lbl">Part of Westlake's premier master-planned village</div></div>
+      <div class="cell"><div class="num wide">Modern</div><div class="lbl">Luxury architectural standards on every home</div></div>
+      <div class="cell"><div class="num wide">Dog Park</div><div class="lbl">Plus preserved green space and connected trails</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SITE PLAN ================= -->
+<section class="section plan" id="siteplan">
+  <div class="wrap">
+    <div class="plan-grid">
+      <div class="plan-map">
+        <img src="assets/lot-map.png" alt="Ventanas Westlake site plan showing 52 homesites across Blocks B, C, D, and E, streets including Ellis Drive, Molly Drive, Edison Drive, Homer Drive, Otter Lane, Cru Drive and Cortes, a dog park, and frontage on Solana Boulevard and Campus Circle">
+      </div>
+      <div>
+        <span class="label" style="display:block;margin-bottom:1.2rem">Site Plan</span>
+        <h2>Fifty-two homesites. One private address.</h2>
+        <p class="lead" style="margin-top:1.3rem">Lots range from intimate interior homesites to premium corner and perimeter positions along the community's preserved edge. Every street is designed to a single, cohesive architectural standard.</p>
+        <ul class="plan-list">
+          <li><span>Block B — Campus Circle perimeter</span><span>B1 to B15</span></li>
+          <li><span>Block C — Cortes and Solana edge</span><span>C2 to C13</span></li>
+          <li><span>Block D — Edison and Homer Drive</span><span>D1 to D13</span></li>
+          <li><span>Block E — Ellis and Molly Drive</span><span>E1 to E13</span></li>
+          <li><span>Community dog park</span><span>Northwest</span></li>
+        </ul>
+        <a href="#contact" class="btn btn--dark">Request Current Availability</a>
+        <p class="fine">Lot map is for illustration. Availability, dimensions, and pricing are subject to change — contact us for the current release.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARCHITECTURE ================= -->
+<section class="arch" id="architecture">
+  <div class="media">
+    <img src="assets/hero.jpg" alt="Detail of a modern home's slatted wood and glass facade at dusk" loading="lazy">
+  </div>
+  <div class="copy">
+    <div class="wrap" style="width:100%">
+      <div class="box">
+        <span class="label" style="display:block;margin-bottom:1.2rem">Architecture</span>
+        <h3>Luxury modern architecture, held to a single standard.</h3>
+        <p>Every home in Ventanas is built to refined architectural guidelines — a cohesive, contemporary language of clean geometry, natural materials, and generous glass that draws the outdoors in.</p>
+        <ul>
+          <li>Expansive glass facades and light-filled interiors</li>
+          <li>Indoor–outdoor living designed for the Texas climate</li>
+          <li>Garages set back from the street to preserve clean streetscapes</li>
+          <li>Build with the region's premier custom homebuilders</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIFESTYLE ================= -->
+<section class="section" id="lifestyle">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">The Lifestyle</span>
+      <h2>A life inside Entrada.</h2>
+      <p class="lead" style="margin-top:1.3rem">Step outside your gate and into one of the most distinctive master-planned communities in North Texas.</p>
+    </div>
+    <div class="life-grid">
+      <div class="col">
+        <h3>Dining and village life</h3>
+        <p>Entrada's European-inspired village puts restaurants, cafés, retail, and gathering places within walking distance of your front door.</p>
+      </div>
+      <div class="col">
+        <h3>Trails and green space</h3>
+        <p>Miles of scenic trails wind through preserved landscape and link to Westlake's wider network — plus a dedicated dog park inside the gates.</p>
+      </div>
+      <div class="col">
+        <h3>Resort amenities</h3>
+        <p>Residents enjoy privileged access to Entrada's resort-style amenities, event spaces, and recreation while keeping the privacy of an intimate enclave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section class="section location" id="location">
+  <div class="wrap">
+    <div class="loc-grid">
+      <div>
+        <span class="label" style="display:block;margin-bottom:1.2rem">Location</span>
+        <h2>Above the noise. Minutes from everything.</h2>
+        <p class="loc-addr">Solana Boulevard and Campus Circle<small>Westlake, Texas 76262</small></p>
+      </div>
+      <div>
+        <p class="lead">Ventanas pairs a serene, gated setting with fast access to the region's business corridors, top-rated schools, and DFW International Airport.</p>
+        <div class="loc-list">
+          <div class="row"><span>DFW International Airport</span><span>About 12 minutes</span></div>
+          <div class="row"><span>SH-114 and SH-170</span><span>Minutes</span></div>
+          <div class="row"><span>Entrada village and dining</span><span>Walkable</span></div>
+          <div class="row"><span>Southlake Town Square</span><span>Short drive</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEVELOPER ================= -->
+<section class="developer">
+  <div class="wrap">
+    <span class="label">Developed by</span>
+    <img src="assets/otter-partners.png" alt="Otter Partners" loading="lazy">
+    <p>Ventanas Westlake is developed by Otter Partners, whose thoughtful approach blends modern design with community-focused amenities and a lasting contribution to the Town of Westlake.</p>
+  </div>
+</section>
+
+<!-- ================= AVAILABILITY ================= -->
+<section class="avail" id="availability">
+  <div class="wrap">
+    <span class="label">Availability</span>
+    <h2 style="margin-top:1.2rem">Limited lots available.</h2>
+    <p>Ventanas is limited to 52 homesites, and availability moves quickly. Reach out for the current lot map, pricing, and builder options — and reserve your place in Westlake's newest gated community.</p>
+    <a href="#contact" class="btn btn--fill">Request the Lot Map and Pricing</a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="label" style="display:block;margin-bottom:1.2rem">Inquire</span>
+        <h2>Speak with the Ventanas team.</h2>
+        <p class="lead" style="margin-top:1.3rem">Contact Troy or Lucy directly, or send a note and we'll be in touch shortly.</p>
+        <div class="agents">
+          <div class="agent">
+            <div class="name">Troy George</div>
+            <div class="role">Designated Broker</div>
+            <a href="tel:+18173084170">(817) 308-4170</a>
+          </div>
+          <div class="agent">
+            <div class="name">Lucy Noonan</div>
+            <div class="role">Broker Associate</div>
+            <a href="tel:+18179133611">(817) 913-3611</a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Netlify Forms: captures submissions automatically once deployed on Netlify -->
+        <form name="ventanas-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="ventanas-inquiry">
+          <p class="hp"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field">
+            <label for="interest">I'm interested in</label>
+            <select id="interest" name="interest">
+              <option>A homesite</option>
+              <option>A completed or to-be-built home</option>
+              <option>Builder information</option>
+              <option>General information</option>
+            </select>
+          </div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message"></textarea></div>
+          <button type="submit" class="btn btn--fill">Send Inquiry</button>
+          <p class="form-note">By submitting, you agree to be contacted by George &amp; Noonan Real Estate Group via call, email, and text regarding real estate services. Reply STOP to opt out. Message and data rates may apply.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="assets/ventanas-logo-white.png" alt="Ventanas Westlake">
+        <p>Luxury modern homesites within Entrada, Westlake, Texas. Developed by Otter Partners.</p>
+        <div class="foot-gn"><img src="assets/george-noonan.png" alt="George &amp; Noonan Real Estate Group" loading="lazy"></div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#overview">Overview</a>
+        <a href="#siteplan">Site Plan</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Inquire</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+18174108769">(817) 410-8769</a>
+        <p>221 E Southlake Blvd<br>Southlake, TX 76092</p>
+        <a href="tel:+18178651500">Office: (817) 865-1500</a>
+      </div>
+    </div>
+
+    <div class="foot-legal">
+      <div class="links">
+        <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection Notice</a>
+        <a href="https://drive.google.com/file/d/1zQmGgVrI37sQxLmGwPpk7tcYcgazK0pV/view?usp=sharing" target="_blank" rel="noopener">Information About Brokerage Services</a>
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/938208c7-113c-4b76-96bb-f65cefa93252/pkR5n4vC6/trec.pdf" target="_blank" rel="noopener">TREC Disclaimer</a>
+      </div>
+      <p>Synergy Realty, LLC &nbsp;|&nbsp; Designated Broker: Troy George &nbsp;|&nbsp; Office: (817) 865-1500</p>
+      <p>All information is deemed reliable but not guaranteed and should be independently reviewed and verified. Renderings, pricing, and availability are subject to change without notice.</p>
+      <div class="foot-bottom">
+        <span>&copy; <span id="year"></span> George &amp; Noonan Real Estate Group. All rights reserved.</span>
+        <span>Westlake, Texas</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>40)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+  btn.addEventListener('click',function(){var o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');btn.setAttribute('aria-expanded',false)})});
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

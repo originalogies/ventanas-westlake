@@ -1,0 +1,20 @@
+# Netlify configuration for Ventanas of Westlake
+# Static site — no build step needed. Netlify serves the repo root as-is.
+
+[build]
+  publish = "."
+
+# Security + performance headers (work well behind Cloudflare too)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Long cache for static assets you add (images, etc.)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
