@@ -6,6 +6,8 @@ Static site (plain HTML/CSS/JS, no build step). Presented by George & Noonan Rea
 ## Files
 - `index.html` — the site (self-contained)
 - `thank-you.html` — confirmation page shown after a form submission
+- `documents/index.html` — Community Documents page, served at `/documents/` (linked from the footer)
+- `docs/` — put community PDFs here (CC&Rs, bylaws, design guidelines, plat) and update the links in `documents/index.html`
 - `netlify.toml` — publish + security/caching headers
 - `assets/` — hero photo, lot map, and logos (see "Assets" below)
 
@@ -42,7 +44,8 @@ Two common setups:
 
 ## Assets (included)
 All imagery lives in `assets/` and is already wired into the site:
-- `hero.jpg` — modern home at dusk (hero and architecture sections)
+- `hero.jpg` — Ventanas home at dusk, 16:9 crop (hero)
+- `architecture.jpg` — modern home at dusk (architecture section)
 - `lot-map.png` — site plan with all 52 homesites (QR code removed)
 - `ventanas-logo-white.png` / `ventanas-logo-black.png` — brand wordmark (white for the dark site, black for favicon/print)
 - `otter-partners.png` — developer logo, transparent background

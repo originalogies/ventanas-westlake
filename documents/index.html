@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Documents | Ventanas Westlake</title>
+<meta name="description" content="Governing documents, design guidelines, plats, and disclosures for Ventanas Westlake, an exclusive gated community in Westlake, Texas.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="/assets/ventanas-logo-black.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syncopate:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#000;--panel:#0f0f0f;--line:rgba(255,255,255,.14);--line-strong:rgba(255,255,255,.28);--white:#fff;--text:#e9e8e3;--muted:#a3a39d;--gold:#c8a96a;
+        --maxw:1100px;--gutter:clamp(1.25rem,5vw,4.5rem);--sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--wide:"Syncopate","Manrope",sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);font-weight:300;color:var(--text);background:var(--black);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+  .label{font-family:var(--wide);font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  header.nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem var(--gutter);background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .brand img{height:22px;width:auto}
+  nav.links{display:flex;gap:2.4rem;align-items:center}
+  nav.links a{font-family:var(--wide);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text);opacity:.85;transition:color .25s}
+  nav.links a:hover{color:var(--gold);opacity:1}
+  .nav-cta{border:1px solid var(--line-strong);padding:.7rem 1.2rem}
+  @media(max-width:760px){nav.links a:not(.nav-cta){display:none}}
+
+  .page-head{padding:9.5rem 0 4rem;border-bottom:1px solid var(--line)}
+  .page-head .label{display:block;margin-bottom:1.2rem}
+  .page-head h1{font-weight:300;font-size:clamp(2.2rem,5vw,3.8rem);letter-spacing:-.03em;line-height:1.05;color:var(--white);max-width:16ch}
+  .page-head p{margin-top:1.4rem;max-width:60ch;color:var(--muted);font-size:1.1rem}
+
+  .group{padding:3.5rem 0 0}
+  .group:last-of-type{padding-bottom:5rem}
+  .group h2{font-family:var(--wide);font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1.2rem}
+  .doc{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;padding:1.4rem 0;border-top:1px solid var(--line)}
+  .doc:last-child{border-bottom:1px solid var(--line)}
+  .doc .title{font-size:1.15rem;font-weight:400;color:var(--white)}
+  .doc .desc{color:var(--muted);font-size:.95rem;margin-top:.25rem}
+  .doc .meta{font-family:var(--wide);font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:.6rem}
+  .doc .get{font-family:var(--wide);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;border:1px solid var(--white);color:var(--white);padding:.85rem 1.4rem;white-space:nowrap;transition:background .3s,color .3s}
+  .doc .get:hover{background:var(--white);color:var(--black)}
+  @media(max-width:600px){.doc{grid-template-columns:1fr}.doc .get{justify-self:start}}
+
+  .request{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .request .wrap{padding-block:4rem;display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+  .request h3{font-weight:300;font-size:1.6rem;letter-spacing:-.02em;color:var(--white)}
+  .request p{color:var(--muted);margin-top:.4rem}
+  .btn{display:inline-block;font-family:var(--wide);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;padding:1.1rem 2.1rem;border:1px solid var(--white);background:var(--white);color:var(--black);transition:background .3s,border-color .3s}
+  .btn:hover{background:var(--gold);border-color:var(--gold)}
+
+  footer{padding:3rem 0;font-size:.8rem;color:var(--muted);line-height:1.75}
+  footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;align-items:center}
+  footer img{height:22px;width:auto}
+  footer a{text-decoration:underline;text-underline-offset:3px}
+  footer a:hover{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/" aria-label="Ventanas Westlake home"><img src="/assets/ventanas-logo-white.png" alt="Ventanas Westlake"></a>
+  <nav class="links">
+    <a href="/#overview">Overview</a>
+    <a href="/#siteplan">Site Plan</a>
+    <a href="/#architecture">Architecture</a>
+    <a href="/#location">Location</a>
+    <a href="/#contact" class="nav-cta">Inquire</a>
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="label">Ventanas Westlake</span>
+    <h1>Community Documents</h1>
+    <p>Governing documents, design guidelines, plats, and disclosures for owners, builders, and prospective buyers. Documents are provided for reference and may be updated periodically.</p>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- ============================================================
+       HOW TO ADD DOCUMENTS
+       1. Drop PDFs into the /docs/ folder at the repo root.
+       2. Update the href and the "Updated" date on each row below.
+       3. Delete any row you don't have a document for.
+       Rows marked "PLACEHOLDER" point to files that don't exist yet.
+       ============================================================ -->
+
+  <section class="group">
+    <h2>Governing Documents</h2>
+    <!-- PLACEHOLDER -->
+    <div class="doc">
+      <div><div class="title">Declaration of Covenants, Conditions and Restrictions</div><div class="desc">The recorded CC&amp;Rs governing use, maintenance, and assessments for all homesites in Ventanas.</div><div class="meta">PDF &nbsp; Updated 2026</div></div>
+      <a class="get" href="/docs/ventanas-ccrs.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <!-- PLACEHOLDER -->
+    <div class="doc">
+      <div><div class="title">Homeowners Association Bylaws</div><div class="desc">Organization, membership, meetings, and governance of the Ventanas Westlake homeowners association.</div><div class="meta">PDF &nbsp; Updated 2026</div></div>
+      <a class="get" href="/docs/ventanas-hoa-bylaws.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <!-- PLACEHOLDER -->
+    <div class="doc">
+      <div><div class="title">Rules and Regulations</div><div class="desc">Community standards for gate access, parking, landscaping, and shared amenities including the dog park and trails.</div><div class="meta">PDF &nbsp; Updated 2026</div></div>
+      <a class="get" href="/docs/ventanas-rules-regulations.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2>Design and Construction</h2>
+    <!-- PLACEHOLDER -->
+    <div class="doc">
+      <div><div class="title">Architectural Design Guidelines</div><div class="desc">The modern architectural standards every Ventanas home is held to — massing, materials, glazing, setbacks, and exterior lighting.</div><div class="meta">PDF &nbsp; Updated 2026</div></div>
+      <a class="get" href="/docs/ventanas-design-guidelines.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <!-- PLACEHOLDER -->
+    <div class="doc">
+      <div><div class="title">Builder Guidelines and Construction Rules</div><div class="desc">Site management, hours, staging, and approval steps for builders working within the gates.</div><div class="meta">PDF &nbsp; Updated 2026</div></div>
+      <a class="get" href="/docs/ventanas-builder-guidelines.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+    <!-- PLACEHOLDER -->
+    <div class="doc">
+      <div><div class="title">Architectural Review Submission Form</div><div class="desc">Application for plan review and approval prior to construction or exterior modification.</div><div class="meta">PDF &nbsp; Updated 2026</div></div>
+      <a class="get" href="/docs/ventanas-arc-submission-form.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2>Plats and Site Plan</h2>
+    <div class="doc">
+      <div><div class="title">Ventanas Westlake Site Plan</div><div class="desc">Illustrative lot map showing all 52 homesites across Blocks B, C, D, and E, community streets, and the dog park.</div><div class="meta">PNG &nbsp; Illustrative, not to scale</div></div>
+      <a class="get" href="/assets/lot-map.png" target="_blank" rel="noopener">View</a>
+    </div>
+    <!-- PLACEHOLDER -->
+    <div class="doc">
+      <div><div class="title">Recorded Final Plat</div><div class="desc">The recorded subdivision plat with lot dimensions, easements, and dedications as filed with the county.</div><div class="meta">PDF &nbsp; Updated 2026</div></div>
+      <a class="get" href="/docs/ventanas-final-plat.pdf" target="_blank" rel="noopener">Download</a>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2>Brokerage Disclosures</h2>
+    <div class="doc">
+      <div><div class="title">Information About Brokerage Services</div><div class="desc">Texas Real Estate Commission required notice describing the types of brokerage relationships.</div><div class="meta">PDF &nbsp; TREC Form IABS 1-0</div></div>
+      <a class="get" href="https://drive.google.com/file/d/1zQmGgVrI37sQxLmGwPpk7tcYcgazK0pV/view?usp=sharing" target="_blank" rel="noopener">View</a>
+    </div>
+    <div class="doc">
+      <div><div class="title">TREC Consumer Protection Notice</div><div class="desc">Notice regarding the Texas Real Estate Commission and the Real Estate Recovery Trust Account.</div><div class="meta">Web &nbsp; trec.texas.gov</div></div>
+      <a class="get" href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">View</a>
+    </div>
+    <div class="doc">
+      <div><div class="title">TREC Disclaimer</div><div class="desc">Brokerage disclaimer for Synergy Realty, LLC.</div><div class="meta">PDF</div></div>
+      <a class="get" href="https://d1e1jt2fj4r8r.cloudfront.net/938208c7-113c-4b76-96bb-f65cefa93252/pkR5n4vC6/trec.pdf" target="_blank" rel="noopener">View</a>
+    </div>
+  </section>
+
+</main>
+
+<section class="request">
+  <div class="wrap">
+    <div>
+      <h3>Need a document that isn't listed?</h3>
+      <p>Contact the Ventanas team and we'll send it directly.</p>
+    </div>
+    <a class="btn" href="/#contact">Contact Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <img src="/assets/george-noonan.png" alt="George &amp; Noonan Real Estate Group">
+      <span>Synergy Realty, LLC &nbsp;|&nbsp; Designated Broker: Troy George &nbsp;|&nbsp; <a href="tel:+18178651500">(817) 865-1500</a> &nbsp;|&nbsp; <a href="/">Back to Ventanas</a></span>
+    </div>
+    <p style="margin-top:1.2rem">Documents are provided for informational purposes and may be superseded by recorded instruments. Please verify against the official recorded versions.</p>
+  </div>
+</footer>
+
+</body>
+</html>
